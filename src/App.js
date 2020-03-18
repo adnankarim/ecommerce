@@ -1,10 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
+import {Route} from 'react-router-dom';
+import {Switch} from 'react-router-dom';
+import HomePage from './pages/homepage/homepage.component';
+import ShopPage from './components/shop/shop.component';
 
-class App extends Component {
-  render() {
-    return <div className='App'>Hello World</div>;
-  }
+
+
+
+function App() {
+  return (
+    <div>
+      <Switch >
+      <Route  exact path='/' component={HomePage}/>
+      <Route path='/shop' component={ShopPage}/> 
+      </Switch>
+     
+    </div>
+  );
 }
 
 export default App;
